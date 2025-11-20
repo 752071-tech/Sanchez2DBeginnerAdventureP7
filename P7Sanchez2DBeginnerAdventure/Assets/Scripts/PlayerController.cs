@@ -7,10 +7,12 @@ using UnityEngine.InputSystem;
 public class PlayerControllerTutorialUpdates : MonoBehaviour
 {
     public InputAction LeftAction;
+    public InputAction MoveAction;
     // Start is called before the first frame update
     void Start()
     {
         LeftAction.Enable();
+        MoveAction.Enable();
 
     }
 
@@ -21,11 +23,11 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         float horizontal = 0.0f;
         if (Keyboard.current.leftArrowKey.isPressed)
         {
-            horizontal = -0.3f;
+            horizontal = -0.2f;
         }
         else if (Keyboard.current.rightArrowKey.isPressed)
         {
-            horizontal = 0.3f;
+            horizontal = 0.2f;
         }
         Debug.Log(horizontal);
 
@@ -33,11 +35,11 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         float vertical = 0.0f;
         if (Keyboard.current.upArrowKey.isPressed)
         {
-            vertical = 0.3f;
+            vertical = 0.2f;
         }
         else if (Keyboard.current.downArrowKey.isPressed)
         {
-            vertical = -0.3f;
+            vertical = -0.2f;
         }
         Debug.Log(vertical);
 
