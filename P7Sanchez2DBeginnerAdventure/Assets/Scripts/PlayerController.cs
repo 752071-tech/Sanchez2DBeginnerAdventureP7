@@ -43,8 +43,9 @@ public class PlayerControllerTutorialUpdates : MonoBehaviour
         }
         Debug.Log(vertical);
 
-
-        Vector2 position = transform.position;
+        Vector2 move = MoveAction.ReadValue<Vector2>();
+        Debug.Log(move);
+        Vector2 position = (Vector2)transform.position + move * 3.0f * Time.deltaTime;
         position.x = position.x + 0.1f * horizontal;
         position.y = position.y + 0.1f * vertical;
         transform.position = position;
